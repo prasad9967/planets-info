@@ -2,7 +2,7 @@ import React from 'react'
 
 const Demo = () => {
   return (
-    <div>
+    <div className='text-9xl font-bold underline'>
       Hi there
     </div>
   )
