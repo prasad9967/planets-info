@@ -11,7 +11,11 @@
 }
 
 .heading{
-  @apply font-medium ml-6;
+  @apply  ml-6 font-medium font-serif;
+}
+
+.content{
+  @apply font-normal font-mono;
 }
 
 body {

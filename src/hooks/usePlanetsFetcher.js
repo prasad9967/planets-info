@@ -10,15 +10,19 @@ const usePlanetsFetcher = () => {
     useEffect(()=>{
         const fetchPlanets = async () => {
             const page = Math.min(currentPage, totalPages)
+            try{
             const {data} = await axios.get(`https://swapi.dev/api/planets/?page=${page}&format=json`)
             setPages(data.results)
             setLoading(false)
+            }catch(error){
+                console.log(error)
+            }
         }
         fetchPlanets()
     },[currentPage])
 
     return{
-        loading, pages, totalPages, currentPage, setCurrentPage,
+        loading, pages, totalPages, currentPage, setCurrentPage
     }
 }
 
