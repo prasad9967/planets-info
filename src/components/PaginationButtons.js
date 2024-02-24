@@ -3,9 +3,12 @@ import {BsChevronLeft, BsChevronRight} from 'react-icons/bs'
 import {motion} from 'framer-motion'
 
 const PaginationButtons = ({setCurrentPage, currentPage, totalPages}) => {
+
+  const goToTop = () => window.scrollTo(0,0)
+
   const handlePageClick = ({selected}) => {
     setCurrentPage(selected+1)
-    console.log(selected)
+    goToTop()
   }
   const paginationVariants = {
     hidden: {
